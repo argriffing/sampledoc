@@ -112,6 +112,88 @@ which is rendered as
 
    W^{3\beta}_{\delta_1 \rho_1 \sigma_2} \approx U^{3\beta}_{\delta_1 \rho_1}
 
+
+
+
+Induced p-norm:
+
+.. math::
+
+   \lVert A \rVert_p = \sup_{x \neq 0} \dfrac
+        {\lVert A x \rVert_p}
+        {\lVert x \rVert_p}
+
+Matrix p-Norms are NP-Hard to Approximate
+if :math:`p \notin \left\{ 1, 2, \infty \right\}`.
+
+
+Entrywise p-norm:
+
+.. math::
+
+   \lVert A \rVert_p
+       = \lVert \text{vec} \left( A \right) \rVert_p
+       = \left(
+            \sum_{i=1}^m
+            \sum_{j=1}^n
+            \lvert a_{ij} \rvert^p
+         \right)^{\frac{1}{p}}
+
+
+Frobenius norm:
+
+.. math::
+
+   \lVert A \rVert_2
+       = \lVert \text{vec} \left( A \right) \rVert_2
+       = \left(
+            \sum_{i=1}^m
+            \sum_{j=1}^n
+            \lvert a_{ij} \rvert^2
+         \right)^{\frac{1}{2}}
+
+
+Schatten p-norm:
+
+.. math::
+
+   \lVert A \rVert_p
+       = \left(
+            \sum_{i=1}^{\min \left\{ m, n \right\}}
+            \sigma_i^p
+         \right)^{\frac{1}{p}}
+
+
+Nuclear norm:
+
+.. math::
+
+   \lVert A \rVert_{*}
+       = \text{trace} \left( \sqrt{ A^{*} A } \right)
+       = \sum_{i=1}^{\min \left\{ m, n \right\}} \sigma_i
+
+
+Spectral norm:
+
+.. math::
+
+   \lVert A \rVert_{2}
+       = \sqrt{ \lambda_{\max} \left( A^{*} A \right) }
+       = \sigma_{\max} \left( A \right)
+
+
+Ky-Fan k-norm:
+
+Given singular values 
+:math:`\sigma_1 \geq \sigma_2 \geq \cdots \geq \sigma_n \geq 0`,
+the Ky-Fan k-norm is defined as follows.
+
+.. math::
+
+   \lVert A \rVert_{k} = \sum_{i=1}^k \sigma_i
+
+
+
 Recent versions of Sphinx include built-in support for math.
 There are three flavors:
 
